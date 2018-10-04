@@ -7,9 +7,9 @@ import tokens from "./../store/selectors/tokens";
 
 import OasisWidgetFrame from "../containers/OasisWidgetFrame";
 import OasisSelect from "./OasisSelect";
-import OasisChartPrice from "./OasisChartPrice";
-import OasisChartVolume from "./OasisChartVolume";
-import OasisChartDepth from "./OasisChartDepth";
+import {OasisChartPrice} from "./OasisChartPrice";
+import {OasisChartVolume} from "./OasisChartVolume";
+import {OasisChartDepth} from "./OasisChartDepth";
 
 import styles from "./OasisChart.scss";
 
@@ -37,12 +37,12 @@ export class OasisChart extends PureComponent {
     const { chart } = this.state;
     switch (chart) {
       case CHART_TYPE_PRICE:
-        return <OasisChartPrice tradingPair={this.props.activeTradingPair} />;
+        return <OasisChartPrice {...this.props.chartPriceProps} tradingPair={this.props.activeTradingPair} />;
 
       case CHART_TYPE_VOLUME:
-        return <OasisChartVolume tradingPair={this.props.activeTradingPair} />;
+        return <OasisChartVolume {...this.props.chartVolumeProps} tradingPair={this.props.activeTradingPair} />;
       case CHART_TYPE_DEPTH:
-        return <OasisChartDepth tradingPair={this.props.activeTradingPair} />;
+        return <OasisChartDepth {...this.props.chartDepthProps} tradingPair={this.props.activeTradingPair} />;
     }
   }
   render() {
