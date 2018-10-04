@@ -10,8 +10,10 @@ import OasisMarketWidget from './components/OasisMarketWidget';
 
 import OasisWidgetFrame from './containers/OasisWidgetFrame';
 
-import {OasisSignificantDigitsWrapper} from './containers/OasisSignificantDigits'
+import OasisSignificantDigitsWrapper from './containers/OasisSignificantDigits'
 
+
+import { FlexBox } from "./components/FlexBox";
 
 // import OasisMakeSellOffer from './components/OasisMakeSellOffer';
 // import OasisMakeBuyOffer from './components/OasisMakeBuyOffer';
@@ -31,5 +33,6 @@ export {
     OasisSellOrders,
     OasisTable,
     OasisWidgetFrame,
-    OasisSignificantDigitsWrapper
+    OasisSignificantDigitsWrapper,
+    FlexBox
 };
