@@ -23,6 +23,13 @@ import OasisButton from "../components/OasisButton";
 
 import styles from "./OasisOfferMakeForm.scss";
 import tableStyles from "../styles/modules/_table.scss";
+
+export {
+  styles,
+  tableStyles  
+};
+
+
 import CSSModules from "react-css-modules";
 import OasisVolumeIsGreaterThanUserBalance from "../components/OasisVolumeIsGreaterThanUserBalance";
 // import { formatAmount, PRICE_DECIMAL } from '../utils/tokens/pair';
@@ -288,11 +295,11 @@ export class OfferMakeForm extends React.Component {
               <td className={tableStyles.currency}>
                 {baseToken}
                 <div>
-                  {isUserTokenBalanceSufficient && (
+                  {/* {isUserTokenBalanceSufficient && (
                     <OasisVolumeIsGreaterThanUserBalance
                       offerMax={isUserTokenBalanceSufficient}
                     />
-                  )}
+                  )} */}
                 </div>
               </td>
             </tr>
@@ -304,7 +311,7 @@ export class OfferMakeForm extends React.Component {
                 onFocus={this.onTotalFieldSectionFocus}
               >
                 <div className={tableStyles.inputGroup}>
-                  {this.setMaxButton()}
+                  {/* {this.setMaxButton()} */}
                   {this.renderTotalField()}
                 </div>
               </td>
@@ -356,8 +363,9 @@ export function mapDispatchToProps(dispatch) {
   return { actions: bindActionCreators(actions, dispatch) };
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(
-  reduxForm({})(
+export default 
+// connect(mapStateToProps, mapDispatchToProps)(
+  // reduxForm({})(
     CSSModules(OfferMakeForm, { styles, tableStyles }, { allowMultiple: true })
-  )
-);
+  // )
+// );
