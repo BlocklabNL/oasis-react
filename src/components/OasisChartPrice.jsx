@@ -8,6 +8,7 @@ import charts from './../store/selectors/charts';
 import {Line} from 'react-chartjs-2';
 import {tooltipContainer, CHART_HEIGHT} from './OasisChart';
 import moment from 'moment';
+import { registerAccountSpecificSubscriptions } from '../bootstrap/web3';
 
 const propTypes = PropTypes && {
   priceChartLabels: PropTypes.array.isRequired,
@@ -65,7 +66,7 @@ export class OasisChartPrice extends PureComponent {
               ticks: {
                 autoSkip: false,
                 maxRotation: 0,
-                callback: ts => ts && moment.unix(ts).format('DD/MM'),
+                // callback: ts => ts && moment.unix(ts).format('DD/MM'),
               },
             }],
           },

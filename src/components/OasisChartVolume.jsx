@@ -67,7 +67,7 @@ export class OasisChartVolume extends PureComponent {
             xAxes: [{
               display: true,
               ticks: {
-                callback: ts => moment.unix(ts).format('DD/MM'),
+                // callback: ts => moment.unix(ts).format('DD/MM'),
               },
             }],
           },

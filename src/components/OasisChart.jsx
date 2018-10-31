@@ -47,7 +47,8 @@ export class OasisChart extends PureComponent {
   }
   render() {
     const { initialMarketHistoryLoaded } = this.props;
-    const types = [CHART_TYPE_PRICE, CHART_TYPE_VOLUME, CHART_TYPE_DEPTH];
+    const types = [CHART_TYPE_PRICE, CHART_TYPE_VOLUME ];
+      // CHART_TYPE_DEPTH];
     const select = (
       <OasisSelect
         value={this.state.chart}
